@@ -1,0 +1,76 @@
+@host=http://localhost:3001/admin
+################ REQUESTS ################ 
+GET {{host}}/best-clients?start=2000-01-01&end=2022-03-31
+#### response ######## response ######## response ######## response ####
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+ETag: W/"59-kG3WisyE4vnQZJnpzDOxl8cFpbQ"
+Date: Sat, 26 Mar 2022 19:10:40 GMT
+Connection: close
+
+[
+  {
+    "id": 4,
+    "fullName": "Ash Kethcum",
+    "paid": 2020
+  },
+  {
+    "id": 2,
+    "fullName": "Mr Robot",
+    "paid": 442
+  }
+]
+#### ####
+
+GET {{host}}/best-clients?start=2000-01-01&end=2022-03-31&limit=4
+#### response ######## response ######## response ######## response ####
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 178
+ETag: W/"b2-JeT+2iYLt9YxXQKJS5/V3WXgJrU"
+Date: Sat, 26 Mar 2022 19:10:49 GMT
+Connection: close
+
+[
+  {
+    "id": 4,
+    "fullName": "Ash Kethcum",
+    "paid": 2020
+  },
+  {
+    "id": 2,
+    "fullName": "Mr Robot",
+    "paid": 442
+  },
+  {
+    "id": 1,
+    "fullName": "Harry Potter",
+    "paid": 442
+  },
+  {
+    "id": 3,
+    "fullName": "John Snow",
+    "paid": 200
+  }
+]
+#### ####
+
+GET {{host}}/best-profession?start=2000-01-01&end=2022-03-31
+#### response ######## response ######## response ######## response ####
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 46
+ETag: W/"2e-nsq+zPC9xUygTR797FcJSQJ/oO0"
+Date: Sat, 26 Mar 2022 19:11:05 GMT
+Connection: close
+
+{
+  "id": 7,
+  "fullName": "Alan Turing",
+  "total": 2020
+}
+#### ####
